@@ -1,6 +1,11 @@
 locals {
   providers = {
-    version = "2.11.0"
-    config_path = "~/.kube/config"
+    kubernetes = {
+        version = "2.11.0"
+        config_path = "~/.kube/config"
+    }
+    helm = {
+        version = "2.9.0"
+    }
   }
 }
