@@ -21,6 +21,16 @@ resource "helm_release" "podinfo_frontend" {
     name  = "backend"
     value = "http://backend-podinfo:9898/echo"
   }
+
+  set {
+    name = "ui.message"
+    value = "Hello from ${upper(var.environment)}"
+  }
+
+  set {
+    name = "ui.color"
+    value = var.podinfo_ui_color
+  } 
 }
 
 resource "helm_release" "podinfo_backend" {
