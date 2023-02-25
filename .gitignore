@@ -29,5 +29,4 @@ override.tf.json
 # example: *tfplan*
 
 # terragrunt generated files
-provider.tf
 backend.tf
